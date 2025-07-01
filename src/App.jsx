@@ -31,7 +31,7 @@ function App() {
           <InputField id='annualInvestment' label='Annual Investment' value={investmentFields.annualInvestment} handleChange={handleChangeOnInvestmentFields} />
         </div>
         <div className="input-group">
-          <InputField id='expectedReturn' label='Expected Investment' value={investmentFields.expectedReturn} handleChange={handleChangeOnInvestmentFields} />
+          <InputField id='expectedReturn' label='Expected Returns' value={investmentFields.expectedReturn} handleChange={handleChangeOnInvestmentFields} />
           <InputField id='duration' label='Duration' value={investmentFields.duration} handleChange={handleChangeOnInvestmentFields} />
         </div>
       </UserInput>
