@@ -13,6 +13,8 @@ function App() {
     duration: 10
   });
 
+  const inputIsValid = investmentFields.duration <= 0;
+
   function handleChangeOnInvestmentFields(identifier, newValue) {
     setInvestmentFields((prevValue) => {
       return {
@@ -35,7 +37,7 @@ function App() {
           <InputField id='duration' label='Duration' value={investmentFields.duration} handleChange={handleChangeOnInvestmentFields} />
         </div>
       </UserInput>
-      <Results input={investmentFields} />
+      {!inputIsValid ? <Results input={investmentFields} /> : <p className="center">Please enter duration number greater than zero.</p>}
     </>
   )
 }
